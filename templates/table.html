@@ -19,11 +19,15 @@
 
 	</head>
 	<body>
+		{{ COPY.content.table_explanation }}
 		{% include '_table.html' %}
 		<script type="text/javascript">
 			var pymChild = new pym.Child({
 				id: 'harvey-table',
 			});
 		</script>
+		<footer>
+			{{ COPY.content.table_footer }}
+		</footer>
 	</body>
 </html>
