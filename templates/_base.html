@@ -10,7 +10,6 @@
     <title>{{ COPY.content.project_name }}</title>
 
     <!-- META TAGS -->
-    {% include '_meta.html' %}
 
     <!-- FONTS -->
     {% include '_fonts.html' %}
@@ -40,16 +39,7 @@
     {% block nav %}
     <nav role="navigation">
         <ul class="site-links">
-            <li class="npr"><a href="http://npr.org"><img src="http://media.npr.org/chrome/news/nprlogo_138x46.gif" alt="NPR" /></a></li>
-            <li class="news"><a href="http://www.npr.org/sections/news/">News</a></li>
-            <li class="arts"><a href="http://www.npr.org/sections/arts/">Arts &amp; Life</a></li>
-            <li class="music"><a href="http://www.npr.org/music/">Music</a></li>
-            <li class="listen"><a href="http://www.npr.org/listen/">Listen</a></li>
-        </ul>
-        <ul class="site-links-2">
-            <li class="stations"><a href="http://www.npr.org/templates/stations/stations/">Stations</a></li>
-            <li class="donate"><a href="http://www.npr.org/stations/donate/index.php">Donate</a></li>
-            <li class="shop"><a href="http://shop.npr.org">Shop</a></li>
+            <li class="listen"><a href="https://github.com/benlk/harvey-senior-homes/blob/master/contributing.md">Contribute</a></li>
         </ul>
     </nav>
     {% endblock nav %}
@@ -64,23 +54,13 @@
     <footer>
         <div class="primary">
             <ul>
-                <li><a href="http://www.npr.org" data-action="Click Logo"><img src="http://media.npr.org/chrome/news/nprlogo_138x46.gif" alt="NPR Logo"></a></li>
-                <li class="news"><a href="http://www.npr.org/sections/news/">News</a></li>
-                <li class="artslife"><a href="http://www.npr.org/sections/arts/">Arts &amp; Life</a></li>
-                <li class="music"><a href="http://www.npr.org/music/">Music</a></li>
-                <li class="programs"><a href="http://www.npr.org/programs/">Programs</a></li>
-                <li class="listen"><a href="http://www.npr.org/listen/">Listen</a></li>
-                <li class="about"><a href="http://www.npr.org/about/">About</a></li>
+                <li class="listen"><a href="https://github.com/benlk/harvey-senior-homes/blob/master/contributing.md">Contribute</a></li>
+                <li class="listen"><a href="https://github.com/benlk/harvey-senior-homes/">GitHub</a></li>
             </ul>
         </div>
         <div class="secondary">
-            <p>&copy;2016 NPR</p>
-            <ul>
-                <li id="footerContact"><a href="http://help.npr.org/npr/includes/customer/npr/custforms/contactus.aspx">Contact</a></li>
-                <li><a href="http://www.npr.org/about/termsofuse.html">Terms of Use</a></li>
-                <li><a href="http://www.npr.org/about/privacypolicy.html">Privacy</a></li>
-                <li><a href="http://thin.npr.org/">Text-Only</a></li>
-            </ul>
+            <p>This project was made possible thanks to NPR's <a href="https://github.com/nprapps/app-template">App Template</a>, Google Sheets, and the contributors: Ben Keith, Lisa Williams, and ...</p>
+            <p>&copy; 2017. Available under a <a href="https://creativecommons.org/licenses/by/4.0">Creative Commons Attribution 4.0 International License</a>.</p>
         </div>
     </footer>
     {% endblock footer %}

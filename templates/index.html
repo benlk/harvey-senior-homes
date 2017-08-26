@@ -31,14 +31,7 @@
                 </div>
 
                 <h2 class="knockout-example">Example COPY list</h2>
-                <dl>
-                    {% for row in COPY.example_list %}
-                    <dt>{{ row.term }}</dt><dd>{{ row.definition }}</dd>
-                    {% endfor %}
-                </dl>
-
-                <h2 class="knockout-example">JST example</h2>
-                <p id="template-example"></p>
+                {% include '_table.html' %}
             </div>
         </div>
     </div>
