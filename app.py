@@ -37,6 +37,15 @@ def index():
 
     return make_response(render_template('index.html', **context))
 
+@app.route('/table.html')
+def table():
+    """
+    the pym-child table
+    """
+    context = make_context()
+
+    return make_response(render_template('table.html', **context))
+
 app.register_blueprint(static.static)
 app.register_blueprint(oauth.oauth)
 

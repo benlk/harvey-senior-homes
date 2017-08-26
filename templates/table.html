@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<script type="text/javascript" src="https://pym.nprapps.org/pym.v1.min.js"></script>
+
+		{{ CSS.push('less/table.less') }}
+		{{ CSS.push('www/css/tablesaw/tablesaw.css') }}
+		{{ CSS.render('css/rendered/table.min.css') }}
+		{{ JS.push('js/lib/tablesaw.js') }}
+		{{ JS.push('js/lib/tablesaw-init.js') }}
+		{{ JS.render('js/table.min.js') }}
+
+		<script type="text/javascript">
+			var pymChild = new pym.Child({
+				id: 'harvey-table',
+			});
+		</script>
+	</head>
+	<body>
+		{% include '_table.html' %}
+	</body>
+</html>

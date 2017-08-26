@@ -38,11 +38,11 @@ ASSETS_SLUG = 'harvey-senior-homes'
 """
 DEPLOYMENT
 """
-PRODUCTION_S3_BUCKET = 'apps.npr.org'
+PRODUCTION_S3_BUCKET = 'f.benlk.com'
 
-STAGING_S3_BUCKET = 'stage-apps.npr.org'
+STAGING_S3_BUCKET = 'f.benlk.com'
 
-ASSETS_S3_BUCKET = 'assets.apps.npr.org'
+ASSETS_S3_BUCKET = 'f.benlk.com'
 
 DEFAULT_MAX_AGE = 20
 
