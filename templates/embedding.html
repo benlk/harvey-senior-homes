@@ -28,6 +28,11 @@
             <div id="main-content" class="col-md-12">
                 <h1>{{ COPY.content.embedding_title }}</h1>
                 {{ COPY.content.embedding_instructions }}
+                <p>If you can paste &lt;div&gt; and &lt;script&gt; tags into your website or your CMS, use this code:</p>
+                <pre>{% filter forceescape %}{% include '_table-iframe.html' %}{% endfilter %}</pre>
+                <p>If you are using WordPress and the <a href="https://wordpress.org/plugins/pym-shortcode/">Pym Shortcode</a> plugin, use this code:</p>
+                <pre>[pym src="http://f.benlk.com/harvey-senior-homes/table.html" id="harvey-table"]</pre>
+                <p>If your CMS accepts neither of those, talk to your CMS team.</p>
             </div>
         </div>
     </div>
