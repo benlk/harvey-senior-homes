@@ -1,8 +1,3 @@
-Copyright 2017 NPR.  All rights reserved.  No part of these materials may be reproduced, modified, stored in a retrieval system, or retransmitted, in any form or by any means, electronic, mechanical or otherwise, without prior written permission from NPR.
-
-(Want to use this code? Send an email to nprapps@npr.org!)
-
-
 harvey-senior-homes
 ========================
 
@@ -33,7 +28,15 @@ harvey-senior-homes
 What is this?
 -------------
 
-**TKTK: Describe harvey-senior-homes here.**
+`harey-senior-homes` is a website listing every single retirement home, senior community, assisted living facility, and suchlike within the path of Hurricane Harvey. THe goal is to have one repository that lists every location, when it was last contacted, and what its status was at the time.
+
+This repository is built using NPR's [app template](https://github.com/nprapps/app-template), which is provided under an MIT license.
+
+The code for this repository is likewise provided under an MIT License. See LICENSE
+
+The content of this repository and its associated Google Sheet (https://docs.google.com/spreadsheets/u/1/d/1M0s6mW3SHWslazLE3w4GGLe40ONYbjvLCxibWDhMu2s/) are provided under the terms of the [Creative Commons Attribution 4.0 International license](https://creativecommons.org/licenses/by/4.0/). You are free to copy and redistribute the material in any medium or format, to remix, transform, and built upon the material for any purpose (even commercially) provided that you credit this project, provide a link to [the license](https://creativecommons.org/licenses/by/4.0/), and indicate if changes were made. You may do so in any reasonable manner, but not in any way that suggests the licensor endorses you or your use.
+
+If you want to help, dive right in! There's a whole tab of issues [right here](https://github.com/benlk/harvey-senior-homes/issues). 
 
 Assumptions
 -----------

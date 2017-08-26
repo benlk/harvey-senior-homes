@@ -3,9 +3,6 @@ Update ad tags (DFP),Change `ENVIRONMENT` to `NPR`; change `TESTSERVER` to `fals
 Update Facebook Open Graph tags,Images should have an aspect ratio of 1.91:1 and be a minimum of 1200 x 630. Verify with debugger: https://developers.facebook.com/tools/debug/,Launch TODO
 Update Twitter Card tags,Validator: https://dev.twitter.com/docs/cards/validation/validator,Launch TODO
 Update Twitter/Facebook links,,Launch TODO
-Request npr.org/foo redirect (short URL),https://github.com/nprapps/workinprivate/blob/master/shell_pages.md,Launch TODO
-Create Seamus shell page,https://github.com/nprapps/workinprivate/blob/master/shell_pages.md,Launch TODO
-Request shell page direct,https://github.com/nprapps/workinprivate/blob/master/shell_pages.md,Launch TODO
 Browser testing: IE11,,
 Browser testing: Latest Firefox,,
 Browser testing: Latest Chrome,,
@@ -38,8 +35,6 @@ Send shell page to homepage editors,,Launch TODO
 Distribute launch timeline,"Let stakeholders, social media, etc know what the launch schedule is",Launch TODO
 Run the app through Google Page Speed,http://developers.google.com/speed/pagespeed/insights/,
 Change LICENSE to MIT if open sourcing,By default things are copyright NPR,Launch TODO
-Add Staff team to repository,https://github.com/organizations/nprapps/teams/629980,
-Add Intern team to repository,https://github.com/organizations/nprapps/teams/210132,
 Update Google Analytics topics variable with Seamus topic ids,`app_config.NPR_GOOGLE_ANALYTICS.topics` is necessary to be tracked in all reports. You can steal this value from the source of a related npr.org story,Launch TODO
 Update project meta description,It's in the copytext document. This gets indexed by Google.,Launch TODO
 Setup retrospective review with editor,What did we learn? How do we do better next time?,

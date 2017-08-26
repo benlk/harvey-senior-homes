@@ -27,7 +27,7 @@ PROJECT_FILENAME = 'harvey_senior_homes'
 
 # The name of the repository containing the source
 REPOSITORY_NAME = 'harvey-senior-homes'
-GITHUB_USERNAME = 'nprapps'
+GITHUB_USERNAME = 'benlk'
 REPOSITORY_URL = 'git@github.com:%s/%s.git' % (GITHUB_USERNAME, REPOSITORY_NAME)
 REPOSITORY_ALT_URL = None # 'git@bitbucket.org:nprapps/%s.git' % REPOSITORY_NAME'
 
@@ -92,7 +92,7 @@ DEBUG = True
 """
 COPY EDITING
 """
-COPY_GOOGLE_DOC_KEY = '1e-0bbDyiYVlERBzRQnp9-cQgv448vv5kWSu5DlsELxM'
+COPY_GOOGLE_DOC_KEY = '1M0s6mW3SHWslazLE3w4GGLe40ONYbjvLCxibWDhMu2s'
 COPY_PATH = 'data/copy.xlsx'
 
 """
