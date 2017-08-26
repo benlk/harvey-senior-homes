@@ -15,19 +15,18 @@
 		{{ CSS.render('css/rendered/table.min.css') }}
 		{{ JS.push('js/lib/tablesaw.js') }}
 		{{ JS.push('js/lib/tablesaw-init.js') }}
-		{{ JS.render('js/table.min.js') }}
-
 	</head>
 	<body>
 		{{ COPY.content.table_explanation }}
 		{% include '_table.html' %}
+		<footer>
+			{{ COPY.content.table_footer }}
+		</footer>
 		<script type="text/javascript">
 			var pymChild = new pym.Child({
 				id: 'harvey-table',
 			});
 		</script>
-		<footer>
-			{{ COPY.content.table_footer }}
-		</footer>
+		{{ JS.render('js/table.min.js') }}
 	</body>
 </html>
