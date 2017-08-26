@@ -10,7 +10,7 @@
 // NPR color palette
 // -------------------------
 
-@primary-control: #6d8ac4;
+@primary-control: hsl( 0, 42%, 60% );
 @deep-blue: #7598c9;
 @blue-dark: #1E2E3A;
 @blue-darker: #141D24;
@@ -98,7 +98,6 @@ nav {
   background-color: #e0e0e0;
   height: 46px;
   overflow: hidden;
-  border-bottom: 2px solid #fff;
 
   ul {
       list-style: none;
@@ -128,12 +127,12 @@ nav {
   a,
   a:link,
   a:visited {
-      color: #6d8ac4;
+      color: hsl( 0, 42%, 60% );
       font-weight: bold;
       text-transform: lowercase;
   }
   a:hover,
-  a:active { color: #bccae5; }
+  a:active { color: hsl( 0, 44%, 70% ); }
 
     .npr {
         width: 61px;
@@ -196,8 +195,8 @@ header {
 
         &.left { float: left; }
         &.right { float: right; }
-        a { color: #6d8ac4; }
-    }
+        a { color: hsl( 0, 42%, 60% ); }
+    } 
 }
 
 
@@ -236,10 +235,10 @@ footer {
   }
   li, p { float: left; }
   a, a:link, a:visited {
-      color: #6d8ac4;
+      color: hsl( 0, 42%, 60% );
       font-weight: bold;
   }
-  a:hover, a:active { color: #bccae5; }
+  a:hover, a:active { color: hsl( 0, 44%, 70% ); }
 
   .primary {
     float: left;
@@ -303,10 +302,10 @@ footer {
   nav ul.site-links { margin-left: 20px; }
   footer {
     .primary { display: none; }
-    .secondary p { float: left; font-size: 10px; color: #bccae5; }
+    .secondary p { float: left; font-size: 10px; color: hsl( 0, 44%, 70% ); }
     .secondary ul { float: right; }
     .secondary li { font-size: 10px; text-transform: none; }
-    .secondary a { color: #bccae5; }
+    .secondary a { color: hsl( 0, 44%, 70% ); }
   }
 }
 @media (max-width: 480px) {
