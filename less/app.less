@@ -1,56 +1,6 @@
 @import "less/lib/bootstrap/bootstrap";
 @import "less/lib/prefixer";
-
-// Global variables
-// -------------------------
-
-@img-root: "../../assets";
-
-
-// NPR color palette
-// -------------------------
-
-@primary-control: hsl( 0, 42%, 60% );
-@deep-blue: #7598c9;
-@blue-dark: #1E2E3A;
-@blue-darker: #141D24;
-
-@music-dark: #444d58;
-@music-medium: #e6ebf2;
-@music-light: #dbe0e6;
-@music-red: #bc453e;
-@music-red-dark: #6f3533;
-@music-red-light: #f05b4e;
-
-@music-event-dark: #2e333c;
-@music-event-darker: #16191e;
-@music-event-txt-light: #cfd3de;
-@music-event-txt-dark: #8b9094;
-@music-event-light-button-blue: @deep-blue;
-@music-event-light-button: @deep-blue;
-@music-event-light-highlight-txt: @primary-control;
-@music-event-light-border: #252525;
-
-@music-hp-light: #e7e4dd;
-@music-hp-dark: #19262f;
-@music-hp-link-color: #568fcb;
-@music-hp-link-color2: #4a90e2;
-@music-hp-c-t-asecondary: #8a8a8a;
-
-@yellow: #EFC637;
-@white: #fff;
-@gray-medium: #A0A0A0;
-
-@tag-1: #f97450;
-@tag-2: #f05b4e;
-@tag-3: #ce4242;
-@tag-4: #b73759;
-@tag-5: #933256;
-@tag-6: #7b2c62;
-@tag-7: #653279;
-@tag-8: #524189;
-@tag-9: #5756a5;
-@tag-10: #416ab8;
+@import "less/variables";
 
 // General styles
 // -------------------------
@@ -127,12 +77,12 @@ nav {
   a,
   a:link,
   a:visited {
-      color: hsl( 0, 42%, 60% );
+      color: @primary-control;
       font-weight: bold;
       text-transform: lowercase;
   }
   a:hover,
-  a:active { color: hsl( 0, 44%, 70% ); }
+  a:active { color: @primary-control-hover; }
 
     .npr {
         width: 61px;
@@ -175,31 +125,6 @@ header {
   }
 }
 
-
-// Cube ad
-// -------------------------
-
-.adwrapper {
-    zoom: 1;
-    padding: 0 0 12px 0;
-
-    .sponsor300 {
-        overflow: hidden;
-        width: 300px;
-        margin: 0 auto;
-    }
-    p {
-        margin: 6px 0 0 0;
-        font-size: 11px;
-        color: #999;
-
-        &.left { float: left; }
-        &.right { float: right; }
-        a { color: hsl( 0, 42%, 60% ); }
-    } 
-}
-
-
 // Content
 // -------------------------
 
@@ -235,10 +160,10 @@ footer {
   }
   li, p { float: left; }
   a, a:link, a:visited {
-      color: hsl( 0, 42%, 60% );
+      color: @primary-control;
       font-weight: bold;
   }
-  a:hover, a:active { color: hsl( 0, 44%, 70% ); }
+  a:hover, a:active { color: @primary-control-hover; }
 
   .primary {
     float: left;
@@ -302,10 +227,10 @@ footer {
   nav ul.site-links { margin-left: 20px; }
   footer {
     .primary { display: none; }
-    .secondary p { float: left; font-size: 10px; color: hsl( 0, 44%, 70% ); }
+    .secondary p { float: left; font-size: 10px; color: @primary-control-hover; }
     .secondary ul { float: right; }
     .secondary li { font-size: 10px; text-transform: none; }
-    .secondary a { color: hsl( 0, 44%, 70% ); }
+    .secondary a { color: @primary-control-hover; }
   }
 }
 @media (max-width: 480px) {
