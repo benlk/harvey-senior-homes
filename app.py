@@ -16,12 +16,14 @@ import static
 from flask import Flask, make_response, render_template
 from render_utils import make_context, smarty_filter, urlencode_filter
 from werkzeug.debug import DebuggedApplication
+from helpers import format_zip
 
 app = Flask(__name__)
 app.debug = app_config.DEBUG
 
 app.add_template_filter(smarty_filter, name='smarty')
 app.add_template_filter(urlencode_filter, name='urlencode')
+app.jinja_env.filters['format_zip'] = format_zip
 
 logging.basicConfig(format=app_config.LOG_FORMAT)
 logger = logging.getLogger(__name__)
@@ -45,6 +47,15 @@ def table():
     context = make_context()
 
     return make_response(render_template('table.html', **context))
+
+@app.route('/embedding.html')
+def embedding():
+    """
+    instructions on embedding this item
+    """
+    context = make_context()
+
+    return make_response(render_template('embedding.html', **context))
 
 app.register_blueprint(static.static)
 app.register_blueprint(oauth.oauth)
