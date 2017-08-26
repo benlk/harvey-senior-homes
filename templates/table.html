@@ -2,6 +2,13 @@
 <html>
 	<head>
 		<script type="text/javascript" src="https://pym.nprapps.org/pym.v1.js"></script>
+		<script>
+		TablesawConfig = {
+			getColumnToggleLabelTemplate: function( text ) {
+				return "<label><input type='checkbox' checked><span>" + text + "</span></label>";
+			}
+		};
+		</script>
 
 		{{ CSS.push('less/table.less') }}
 		{{ CSS.push('www/css/tablesaw/tablesaw.css') }}
