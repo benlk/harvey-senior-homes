@@ -7,6 +7,13 @@
             <div class="col-md-12">
                 <h1>{{ COPY.content.project_name|smarty }}</h1>
                 <p class="byline">by <span>{{ COPY.content.byline }}</span></p>
+                <div id="story-meta">
+                    <p class="dateblock">
+                        <span class="date">{{ COPY.content.pubdate }}</span>
+                        <span class="time"> {{ COPY.content.pubtime }}</span>
+                    </p>
+                </div>
+
             </div>
         </div>
     </div>
@@ -18,14 +25,7 @@
 <section id="content">
     <div class="container">
         <div class="row">
-            <div id="main-content" class="col-md-8">
-
-                <div id="story-meta">
-                    <p class="dateblock">
-                        <span class="date">{{ COPY.content.pubdate }}</span>
-                        <span class="time"> {{ COPY.content.pubtime }}</span>
-                    </p>
-                </div>
+            <div id="main-content" class="col-md-12">
 
                 {% include '_table-iframe.html' %}
             </div>

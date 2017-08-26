@@ -10,13 +10,13 @@
 		{{ JS.push('js/lib/tablesaw-init.js') }}
 		{{ JS.render('js/table.min.js') }}
 
+	</head>
+	<body>
+		{% include '_table.html' %}
 		<script type="text/javascript">
 			var pymChild = new pym.Child({
 				id: 'harvey-table',
 			});
 		</script>
-	</head>
-	<body>
-		{% include '_table.html' %}
 	</body>
 </html>
