@@ -1,3 +1,5 @@
+Lost? Send an email to [benlkeith at gmail dot com](mailto:benlkeith@gmail.com) or tweet to [@benlkeith](https://twitter.com/intent/tweet/?text=@benlkeith+please+add+FACILITY+NAME+address+city+state+phone-number+to+the+sheet.+Thank+you!&hashtags=Harvey&related=TexasTribune,RivardReport,TheLensNOLA).
+
 ## Adding homes to the list
 
 Request access to [this google sheet](https://docs.google.com/spreadsheets/d/1M0s6mW3SHWslazLE3w4GGLe40ONYbjvLCxibWDhMu2s/edit#gid=1) and add columns to it in the form described [on this page](https://github.com/benlk/harvey-senior-homes/issues/2).
