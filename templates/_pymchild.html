@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<script type="text/javascript" src="https://pym.nprapps.org/pym.v1.js"></script>
+		{% block head_stuff %}
+		{% endblock %}
+	</head>
+	<body>
+		
+		{% block body %}
+		{% endblock }
+
+		<script type="text/javascript">
+			var pymChild = new pym.Child({
+				id: 'harvey-table',
+			});
+		</script>
+
+		{% block post_pym %}
+		{% endblock %}
+	</body>
+</html>
