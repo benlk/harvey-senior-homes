@@ -9,6 +9,7 @@
 <article>
 	<header>
 		<a class="back" href="{{ S3_BASE_URL }}/table.html">&larr; back to list</a>
+		<span class="id">Tracking ID: {{ location.id }}</span>
 		<h1>{{ location.location_name }}</h1>
 		{% if status %}
 			<h2>status: <span class="status-{{status.color}}">{{status.color}}</span></h2>
