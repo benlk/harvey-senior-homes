@@ -6,6 +6,38 @@ body {
   padding: 0;
   font-family: @font-family-sans-serif;
 }
+span[class*="status"] {
+  display: inline-block;
+  border: 2px black solid;
+  padding: 3px;
+}
+.status-green {
+  background-color: hsl(120, 100%, 85%);
+}
+.status-yellow {
+  background-color: hsl(60, 100%, 85%);
+}
+.status-red {
+  background-color: hsl( 0, 100%, 85%);
+}
+address {
+  font-style: normal
+}
+article {
+  max-width: 720px;
+  margin: 0 auto;
+}
+header, section {
+  padding: 1em 0.7em;
+}
+header {
+  background-color: #ebebeb;
+}
+
+table .date {
+  min-width: 5.5em;
+}
+
 footer {
   padding: 1em 0.7em;
 
