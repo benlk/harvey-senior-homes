@@ -1,31 +1,28 @@
-<!DOCTYPE html>
-<html>
-	<head>
-		<script type="text/javascript" src="https://pym.nprapps.org/pym.v1.js"></script>
-		<script>
-		TablesawConfig = {
-			getColumnToggleLabelTemplate: function( text ) {
-				return "<label><input type='checkbox' checked><span>" + text + "</span></label>";
-			}
-		};
-		</script>
+{% extends '_pymchild.html' %}
 
-		{{ CSS.push('less/table.less') }}
-		{{ CSS.push('www/css/tablesaw/tablesaw.css') }}
-		{{ CSS.render('css/rendered/table.min.css') }}
-		{{ JS.push('js/lib/tablesaw.js') }}
-		{{ JS.push('js/lib/tablesaw-init.js') }}
-	</head>
-	<body>
-		{% include '_table.html' %}
-		<footer>
-			{{ COPY.content.table_footer }}
-		</footer>
-		<script type="text/javascript">
-			var pymChild = new pym.Child({
-				id: 'harvey-table',
-			});
-		</script>
-		{{ JS.render('js/table.min.js') }}
-	</body>
-</html>
+{% block head_stuff %}
+	<script>
+	TablesawConfig = {
+		getColumnToggleLabelTemplate: function( text ) {
+			return "<label><input type='checkbox' checked><span>" + text + "</span></label>";
+		}
+	};
+	</script>
+
+	{{ CSS.push('less/table.less') }}
+	{{ CSS.push('www/css/tablesaw/tablesaw.css') }}
+	{{ CSS.render('css/rendered/table.min.css') }}
+	{{ JS.push('js/lib/tablesaw.js') }}
+	{{ JS.push('js/lib/tablesaw-init.js') }}
+{% endblock %}
+
+{% block body %}
+	{% include '_table.html' %}
+	<footer>
+		{{ COPY.content.table_footer }}
+	</footer>
+{% endblock }
+
+{% block post_pym %}
+	{{ JS.render('js/table.min.js') }}
+{% endblock %}

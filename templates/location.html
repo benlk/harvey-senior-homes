@@ -1,0 +1,26 @@
+{% extends '_pymchild.html' %}
+
+{% block head_stuff %}
+	{{ CSS.push('less/location.less') }}
+	{{ CSS.render('css/rendered/location.min.css') }}
+{% endblock %}
+
+{% block body %}
+	<h1>{{ location.location_name }}</h1>
+	<dl>
+		<dt>Owner:</dt>
+			<dd>{{location.location_owner }}</dd>
+		<dt>Address: </dt>
+			<dd><address>
+				{{ location.address }}<br/>
+				{{ location.city }}, {{ location.state }}, {{ location.zip|format_zip }}
+			</address></dd>
+		<dt>Phone: </dt>
+			<dd>{{ location.phone }}</dd>
+
+		{% if location.mpn %}
+		<dt>Medicare Provider Number</dt>
+			<dd>{{ location.mpn }}</dd>
+		{% endif %}
+	</dl>
+{% endblock %}
