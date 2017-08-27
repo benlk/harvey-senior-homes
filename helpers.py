@@ -115,6 +115,6 @@ def get_location_status_color_by_slug(slug):
 def get_location_status_updated_by_slug(slug):
     status = get_location_status_by_slug(slug)
     try:
-        return status['date'] + '' +  status['time']
+        return status['date'] + ' ' +  status['time']
     except KeyError:
         return u''
