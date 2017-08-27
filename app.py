@@ -85,6 +85,7 @@ for location in location_ids: # 'id' is a __builtin__
 
         context['location'] = get_location_by_slug(slug)
         context['history'] = get_location_history_by_slug(slug)
+        context['status'] = get_location_status_by_slug(slug)
 
         return make_response( render_template( 'location.html', **context ) )
 

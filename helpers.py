@@ -76,6 +76,15 @@ def get_location_history_by_slug(slug):
             history.append( row )
 
         if len( history ) > 1 :
-            history = sorted( history, key=itemgetter( 'date', 'time' ) )
+            history = sorted( history, key=itemgetter( 'date', 'time' ), reverse=True )
 
     return history
+
+def get_location_status_by_slug(slug):
+    history = get_location_history_by_slug(slug)
+    print history
+    status = history[0] if history else []
+    if status['color'] not in [u'red', u'yellow', u'green', u'grey']:
+        status['color'] = u'unknown'
+
+    return status

@@ -7,6 +7,11 @@
 
 {% block body %}
 	<h1>{{ location.location_name }}</h1>
+	{% if status %}
+		<h2>it has a status: {{status.color}}</h2>
+		<p class="status-description">{{ status.status }}</p>
+		<span class="last-updated">Last updated: {{ status.date }} {{ status.time }}
+	{% endif %}
 	<dl>
 		<dt>Owner:</dt>
 			<dd>{{location.location_owner }}</dd>
@@ -22,5 +27,6 @@
 		<dt>Medicare Provider Number</dt>
 			<dd>{{ location.mpn }}</dd>
 		{% endif %}
+
 	</dl>
 {% endblock %}
