@@ -615,9 +615,6 @@ a.tablesaw-btn {
     display: table-cell;
   }
 
-  .tablesaw-columntoggle tbody td {
-    line-height: 2;
-  }
 }
 
 /* Show priority 4 at 800px (50em x 16px) */

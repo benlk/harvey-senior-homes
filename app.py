@@ -24,6 +24,8 @@ app.debug = app_config.DEBUG
 app.add_template_filter(smarty_filter, name='smarty')
 app.add_template_filter(urlencode_filter, name='urlencode')
 app.jinja_env.filters['format_zip'] = format_zip
+app.jinja_env.filters['status_color'] = get_location_status_color_by_slug
+app.jinja_env.filters['status_updated'] = get_location_status_updated_by_slug
 
 logging.basicConfig(format=app_config.LOG_FORMAT)
 logger = logging.getLogger(__name__)

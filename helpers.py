@@ -100,11 +100,23 @@ def get_location_history_by_slug(slug):
 def get_location_status_by_slug(slug):
     history = get_location_history_by_slug(slug)
     try:
-        status = history[0]
-        if status['color'] not in {'red', 'yellow', 'green', 'grey'}:
-            status['color'] = u'unknown'
+        return history[0]
     except IndexError:
-        status = {}
-        status['color'] = u'unknown'
+        return {}
 
-    return status
+def get_location_status_color_by_slug(slug):
+    status = get_location_status_by_slug(slug)
+    try:
+        if status['color'] not in {'red', 'yellow', 'green', 'grey'}:
+            return u'unknown'
+        else:
+            return status['color']
+    except KeyError:
+        return u'unknown'
+
+def get_location_status_updated_by_slug(slug):
+    status = get_location_status_by_slug(slug)
+    try:
+        return status['date'] + '' +  status['time']
+    except KeyError:
+        return u''
