@@ -87,8 +87,6 @@ def get_location_history_by_slug(slug):
     history = []
 
     for row in locations_statuses:
-        print row['id']
-        print slug
         if row['id'] == slug:
             history.append( row )
 
