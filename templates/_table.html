@@ -16,7 +16,9 @@
 	<tbody>
 		{% for row in COPY.locations %}
 			<tr>
-				<td>{{ row.location_name }}</td>
+				<td>
+					<a href="{{ S3_BASE_URL }}/location/{{ row.id }}">{{ row.location_name }}</a>
+				</td>
 				<td></td><!-- need a way of getting the actual status, by passing the row ID to a function -->
 				<td></td><!-- same for this, but for the last-updated thing -->
 				<td>{{ row.phone }}</td>
