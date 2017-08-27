@@ -14,7 +14,7 @@
 		</tr>
 	</thead>
 	<tbody>
-		{% for row in COPY.locations %}
+		{% for row in COPY.locations if row.id %}
 			<tr>
 				<td>
 					<a href="{{ S3_BASE_URL }}/location/{{ row.id }}">{{ row.location_name }}</a>
