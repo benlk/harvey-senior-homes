@@ -4,6 +4,7 @@ import collections
 import copytext
 import re
 import json
+import numbers
 
 from unicodedata import normalize
 from operator import itemgetter
@@ -45,7 +46,12 @@ def format_zip(zip):
 
 def get_locations():
     copy = get_copy()
-    return copy['locations']
+    locations = copy['locations']
+    
+    for location in locations:
+        better_id = location['id'].split('.')
+
+    return locations
 
 def get_location_ids():
     locations = get_locations()
@@ -64,14 +70,25 @@ def get_location_by_slug(slug):
         
     return place
 
+def get_locations_statuses():
+    copy = get_copy()
+    statuses = copy['locations_statuses']
+    
+    for status in statuses:
+        if isinstance( status['id'], numbers.Number):
+            status['id'] = int(float( status['id'] ))
+    return statuses
+
 def get_location_history_by_slug(slug):
     """
     return history, sorted by date then time -> dunno how well this will sort, but we shall see
     """
-    copy = get_copy()
+    locations_statuses = get_locations_statuses()
     history = []
 
-    for row in copy['locations_statuses']:
+    for row in locations_statuses:
+        print row['id']
+        print slug
         if row['id'] == slug:
             history.append( row )
 
@@ -82,9 +99,12 @@ def get_location_history_by_slug(slug):
 
 def get_location_status_by_slug(slug):
     history = get_location_history_by_slug(slug)
-    print history
-    status = history[0] if history else []
-    if status['color'] not in [u'red', u'yellow', u'green', u'grey']:
+    try:
+        status = history[0]
+        if status['color'] not in {'red', 'yellow', 'green', 'grey'}:
+            status['color'] = u'unknown'
+    except IndexError:
+        status = {}
         status['color'] = u'unknown'
 
     return status
