@@ -6,6 +6,7 @@
 {% endblock %}
 
 {% block body %}
+	<a class="back" href="{{ S3_BASE_URL }}/table.html">&larr; back to list</a>
 	<h1>{{ location.location_name }}</h1>
 	{% if status %}
 		<h2>it has a status: {{status.color}}</h2>
