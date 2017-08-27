@@ -13,7 +13,7 @@ import logging
 import oauth
 import static
 
-from flask import Flask, make_response, render_template
+from flask import Flask, make_response, render_template, redirect
 from render_utils import make_context, smarty_filter, urlencode_filter
 from werkzeug.debug import DebuggedApplication
 from helpers import *
@@ -39,6 +39,8 @@ def index():
 
     return make_response(render_template('index.html', **context))
 
+@app.route('/location')
+@app.route('/location/')
 @app.route('/locations')
 @app.route('/locations/')
 def table_redirect():
