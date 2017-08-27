@@ -88,7 +88,6 @@ for location in location_ids: # 'id' is a __builtin__
 
         return make_response( render_template( 'location.html', **context ) )
 
-
 app.register_blueprint(static.static)
 app.register_blueprint(oauth.oauth)
 

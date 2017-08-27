@@ -19,6 +19,17 @@ def get_copy():
         CACHE['copy'] = copytext.Copy(app_config.COPY_PATH)
     return CACHE['copy']
 
+CACHE = {}
+
+def get_copy():
+    """
+    Thank you Ryan for this neat trick to avoid thrashing the disk
+    https://github.com/INN/maine-legislature/blob/master/helpers.py#L361-L364
+    """
+    if not CACHE.get('copy', None):
+        CACHE['copy'] = copytext.Copy(app_config.COPY_PATH)
+    return CACHE['copy']
+
 # Please test the first two lines against "01234-4567": it should not return "001234-4567"
 # Please test the first two lines against "61234-4567": it should not return "061234-4567"
 def format_zip(zip):
