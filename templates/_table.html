@@ -1,28 +1,30 @@
-<table class="tablesaw" data-tablesaw-mode="columntoggle">
+<table class="tablesaw" data-tablesaw-mode="columntoggle" data-tablesaw-sortable data-tablesaw-minimap>
 	<thead>
 		<tr>
-			<th scope="col" data-tablesaw-sortable-col data-tablesaw-priority="persist">Location name</th>
+			<th scope="col" data-tablesaw-sortable-col data-tablesaw-sortable-default-col data-tablesaw-priority="persist">Location name</th>
 			<th scope="col" data-tablesaw-sortable-col data-tablesaw-priority="persist">Status</th>
 			<th scope="col" data-tablesaw-sortable-col data-tablesaw-priority="persist">Updated</th>
 			<th scope="col" data-tablesaw-priority="3">Phone</th>
-			<th scope="col" data-tablesaw-sortable-col data-tablesaw-priority="4">Operator</th>
-			<th scope="col" data-tablesaw-sortable-col data-tablesaw-priority="4">Address</th>
+			<th scope="col" data-tablesaw-sortable-col data-tablesaw-priority="5">Operator</th>
+			<th scope="col" data-tablesaw-sortable-col data-tablesaw-priority="0">Address</th>
 			<th scope="col" data-tablesaw-sortable-col data-tablesaw-priority="2">City</th>
-			<th scope="col" data-tablesaw-sortable-col data-tablesaw-priority="2">State</th>
-			<th scope="col" data-tablesaw-sortable-col data-tablesaw-priority="1">ZIP</th>
-			<th scope="col" data-tablesaw-sortable-col data-tablesaw-priority="6"><abbr title="Medicare Provider Number">MPN</abbr></th>
+			<th scope="col" data-tablesaw-sortable-col data-tablesaw-priority="4">State</th>
+			<th scope="col" data-tablesaw-sortable-col data-tablesaw-priority="0">ZIP</th>
+			<th scope="col" data-tablesaw-sortable-col data-tablesaw-priority="0"><abbr title="Medicare Provider Number">MPN</abbr></th>
 		</tr>
 	</thead>
 	<tbody>
 		{% for row in COPY.locations %}
 			<tr>
-				<td>{{ row.location_name }}</td>
-				<td></td><!-- need a way of getting the actual status, by passing the row ID to a function -->
-				<td></td><!-- same for this, but for the last-updated thing -->
+				<td>
+					<a href="{{ S3_BASE_URL }}/location/{{ row.id }}">{{ row.location_name }}</a>
+				</td>
+				<td>{{ row.id|status_color }}</td><!-- need a way of getting the actual status, by passing the row ID to a function -->
+				<td>{{ row.id|status_updated }}</td><!-- same for this, but for the last-updated thing -->
 				<td>{{ row.phone }}</td>
-				<td>{{ row.location_owner }}</td>
-				<td>{{ row.address }}</td>
-				<td>{{ row.city }}</td>
+				<td>{{ row.location_owner|title }}</td>
+				<td>{{ row.address|title }}</td>
+				<td>{{ row.city|title }}</td>
 				<td>{{ row.state }}</td>
 				<td>{{ row.zip|format_zip }}</td>
 				<td>{{ row.mpn }}</td>

@@ -1,0 +1,72 @@
+{% extends '_pymchild.html' %}
+
+{% block head_stuff %}
+	{{ CSS.push('less/location.less') }}
+	{{ CSS.render('css/rendered/location.min.css') }}
+{% endblock %}
+
+{% block body %}
+<article>
+	<header>
+		<a class="back" href="{{ S3_BASE_URL }}/table.html">&larr; back to list</a>
+		<h1>{{ location.location_name }}</h1>
+		{% if status %}
+			<h2>status: <span class="status-{{status.color}}">{{status.color}}</span></h2>
+			<p class="status-description">
+				{{ status.status|urlize }}
+				<span class="last-updated">Last updated: {{ status.date }} {{ status.time }}
+			</p>
+		{% else %}
+			<h2>status: <span class="status-unknown">unknown</span></h2>
+			<p>This location has no known status. Please contribute status information by following <a href="https://github.com/benlk/harvey-senior-homes/blob/master/contributing.md">the instructions at this link</a>.</p>
+		{% endif %}
+	</header>
+	<section>
+		<h3>Location information:</h3>
+		<dl>
+			<dt>Owner:</dt>
+				<dd>{{location.location_owner }}</dd>
+			<dt>Address: </dt>
+				<dd><address>
+					{{ location.address }}<br/>
+					{{ location.city }}, {{ location.state }}, {{ location.zip|format_zip }}
+				</address></dd>
+			<dt>Phone: </dt>
+				{% if location.phone %}
+					<dd>{{ location.phone }}</dd>
+				{% else %}
+					<dd>This location has no known phone number. Please contribute one by following the instructions <a href="https://github.com/benlk/harvey-senior-homes/blob/master/contributing.md">at this link</a>.</dd>
+				{% endif %}
+
+			{% if location.mpn %}
+			<dt>Medicare Provider Number</dt>
+				<dd>{{ location.mpn }}</dd>
+			{% endif %}
+		</dl>
+	</section>
+	<section>
+		<h3>All status updates:</h3>
+		<table>
+			<thead>
+				<tr>
+				</tr>
+			</thead>
+			<tbody>
+				{% for status in history %}
+					<tr>
+						<td class="date">{{ status.date }}</td>
+						<td class="time">{{ status.time }}</td>
+						<td class="color"><span class="status-{{status.color}}">{{status.color}}</span></td>
+						<td>{{ status.status|urlize }}</td>
+					</tr>
+				{% else %}
+					<p class="status-unknown">This location has no known status. Please contribute status information by following <a href="https://github.com/benlk/harvey-senior-homes/blob/master/contributing.md">the instructions at this link</a>.</p>
+				{% endfor %}
+			</tbody>
+		</table>
+	</section>
+</article>
+<footer>
+	{{ COPY.content.table_footer }}
+</footer>
+{% endblock %}
