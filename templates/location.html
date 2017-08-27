@@ -10,7 +10,7 @@
 	<h1>{{ location.location_name }}</h1>
 	{% if status %}
 		<h2>status: {{status.color}}</h2>
-		<p class="status-description">{{ status.status }}</p>
+		<p class="status-description">{{ status.status|urlize }}</p>
 		<span class="last-updated">Last updated: {{ status.date }} {{ status.time }}
 	{% endif %}
 	<dl>
@@ -28,6 +28,23 @@
 		<dt>Medicare Provider Number</dt>
 			<dd>{{ location.mpn }}</dd>
 		{% endif %}
-
 	</dl>
+
+	<h3>All previous status updates:</h3>
+	<table>
+		<thead>
+			<tr>
+			</tr>
+		</thead>
+		<tbody>
+			{% for status in history %}
+				<tr>
+					<td>{{ status.date }}</td>
+					<td>{{ status.time }}</td>
+					<td>{{ status.color }}</td>
+					<td>{{ status.status|urlize }}</td>
+				</tr>
+			{% endfor %}
+		</tbody>
+	</table>
 {% endblock %}
