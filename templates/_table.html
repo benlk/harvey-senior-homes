@@ -19,7 +19,7 @@
 				<td>
 					<a href="{{ S3_BASE_URL }}/location/{{ row.id }}">{{ row.location_name }}</a>
 				</td>
-				<td>{{ row.id|status_color }}</td><!-- need a way of getting the actual status, by passing the row ID to a function -->
+				<td><span class="status-{{ row.id|status_color }}">{{ row.id|status_color }}</span></td><!-- need a way of getting the actual status, by passing the row ID to a function -->
 				<td>{{ row.id|status_updated }}</td><!-- same for this, but for the last-updated thing -->
 				<td>{{ row.phone }}</td>
 				<td>{{ row.location_owner|title }}</td>

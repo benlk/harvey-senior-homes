@@ -8,6 +8,32 @@ body {
 table {
   overflow-x: scroll;
 }
+[class*="status-"] {
+  display: inline-block;
+  border: 2px black solid;
+  padding: 3px;
+}
+h4,
+#status-colors {
+  margin: 1em 0;
+  padding: 0 15px;
+  li {
+    margin-bottom: 0.3em;
+  }
+}
+.status-green {
+  background-color: @status-green;
+}
+.status-yellow {
+  background-color: @status-yellow;
+}
+.status-red {
+  background-color: @status-red;
+}
+.status-evacuated {
+  background-color: @status-evacuated;
+}
+
 footer {
   padding: 1em 0.7em;
 
@@ -19,4 +45,7 @@ footer {
       color: @primary-control-hover;
     }
   }
+}
+.tablesaw-modeswitch {
+  padding-left: .7em;
 }

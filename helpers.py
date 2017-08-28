@@ -105,7 +105,7 @@ def get_location_status_by_slug(slug):
 def get_location_status_color_by_slug(slug):
     status = get_location_status_by_slug(slug)
     try:
-        if status['color'] not in {'red', 'yellow', 'green', 'grey'}:
+        if status['color'] not in {'red', 'yellow', 'green', 'evacuated'}:
             return u'unknown'
         else:
             return status['color']
