@@ -79,8 +79,8 @@ def embedding():
     return make_response(render_template('embedding.html', **context))
 
 location_ids = get_location_ids()
-for location in location_ids: # 'id' is a __builtin__
-    @app.route('/location/%s' % location, endpoint=location)
+for slug in location_ids: # 'id' is a __builtin__
+    @app.route('/location/%s/' % slug, endpoint=slug)
     def location():
         context = make_context()
         from flask import request
