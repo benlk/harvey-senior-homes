@@ -11,6 +11,7 @@
 		<a class="back" href="{{ S3_BASE_URL }}/table.html">&larr; back to list</a>
 		<span class="id">Tracking ID: {{ location.id }}</span>
 		<h1>{{ location.location_name }}</h1>
+		{% include '_abandonware.html' %}
 		{% if status %}
 			<h2>status: <span class="status-{{status.color}}">{{status.color}}</span></h2>
 			<p class="status-description">
@@ -18,7 +19,7 @@
 				<span class="last-updated">Last updated: {{ status.date }} {{ status.time }}
 			</p>
 		{% else %}
-			<h2>status: <span class="status-unknown">unknown</span></h2>
+			<h2>last status: <span class="status-unknown">unknown</span></h2>
 			<p>This location has no known status. Please contribute status information by following <a href="https://github.com/benlk/harvey-senior-homes/blob/master/contributing.md">the instructions at this link</a>.</p>
 		{% endif %}
 	</header>
